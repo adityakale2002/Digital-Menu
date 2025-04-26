@@ -1,0 +1,152 @@
+.demo-book {
+  background: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+.page {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px;
+  overflow: hidden;
+}
+
+/* Make menu cards fit properly */
+.page-content > div {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style the card within the page */
+.page-content .MuiCard-root {
+  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 100%;
+}
+
+/* Ensure card content is properly laid out */
+.page-content .MuiCardContent-root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 12px !important;
+  overflow: auto;
+}
+
+/* Style the Add to Cart button container */
+.page-content .MuiCardContent-root > div:last-child {
+  margin-top: auto;
+  padding-top: 12px;
+  position: sticky;
+  bottom: 0;
+  background: white;
+  z-index: 1;
+}
+
+.page-shadow {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.page-cover {
+  background: #2A9D8F;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0;
+}
+
+.page-cover-content {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #2A9D8F 0%, #1f7268 100%);
+}
+
+.page-cover-title {
+  font-size: 2rem !important;
+  margin-bottom: 16px !important;
+  color: white !important;
+  text-align: center;
+  padding: 0 16px;
+}
+
+.page-cover-subtitle {
+  font-size: 1rem !important;
+  opacity: 0.9;
+  color: white !important;
+  text-align: center;
+  padding: 0 16px;
+}
+
+/* Custom scrollbar for menu cards */
+.page-content .MuiCardContent-root::-webkit-scrollbar {
+  width: 4px;
+}
+
+.page-content .MuiCardContent-root::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 2px;
+}
+
+.page-content .MuiCardContent-root::-webkit-scrollbar-thumb {
+  background: #2A9D8F;
+  border-radius: 2px;
+}
+
+.page-content .MuiCardContent-root::-webkit-scrollbar-thumb:hover {
+  background: #1f7268;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 600px) {
+  .page-content {
+    padding: 8px;
+  }
+
+  .page-content .MuiCardContent-root {
+    padding: 8px !important;
+  }
+
+  .page-cover-content {
+    padding: 16px;
+  }
+
+  .page-cover-title {
+    font-size: 1.5rem !important;
+    margin-bottom: 12px !important;
+  }
+
+  .page-cover-subtitle {
+    font-size: 0.875rem !important;
+  }
+} 
